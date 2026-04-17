@@ -48,10 +48,10 @@ helixo-dev/
 │   ├── models/Timer.js           # Mongoose schema with virtuals
 │   ├── services/timerService.js  # Business logic (CRUD + storefront)
 │   ├── controllers/              # HTTP handlers (admin + storefront)
-│   ├── routes/                   # Route definitions with validation
-│   ├── middleware/                # Error handler, Joi validation, HMAC
+│   ├── routes/                   # Auth, timers, products, storefront
+│   ├── middleware/                # Error handler, Joi validation, HMAC, CORS
 │   ├── constants/index.js        # Enums, limits, patterns, defaults
-│   ├── database/connection.js    # MongoDB connection (singleton)
+│   ├── database/connection.js    # MongoDB connection (retry with backoff)
 │   ├── __tests__/                # Backend tests (102 tests)
 │   └── frontend/                 # React admin app
 │       ├── pages/index.jsx       # Dashboard (timers list + analytics)
@@ -116,8 +116,8 @@ Virtual field `status` computes: "active" | "scheduled" | "expired" | "inactive"
 
 ```bash
 # 1. Clone the repository
-git clone <repo-url>
-cd helixo-dev
+git clone https://github.com/RahulManu79/Shopify-timecounter-app.git
+cd Shopify-timecounter-app
 
 # 2. Install all dependencies (workspaces handle web, frontend, widget)
 npm install
