@@ -1,0 +1,25 @@
+{
+  "name": "helixo-dev",
+  "version": "1.0.0",
+  "main": "web/index.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "npm run build:widget && shopify app build",
+    "build:widget": "cd widget && npm run build",
+    "dev": "shopify app dev",
+    "dev:widget": "cd widget && npm run watch",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "npm run build:widget && shopify app deploy",
+    "size-check": "cd widget && npm run size-check"
+  },
+  "dependencies": {},
+  "author": "Hp",
+  "private": true,
+  "workspaces": [
+    "web",
+    "web/frontend",
+    "widget"
+  ]
+}
