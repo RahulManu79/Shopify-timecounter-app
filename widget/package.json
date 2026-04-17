@@ -1,0 +1,16 @@
+{
+  "name": "countdown-timer-widget",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "watch": "node esbuild.config.mjs --watch",
+    "size-check": "node esbuild.config.mjs"
+  },
+  "dependencies": {
+    "preact": "^10.25.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}
